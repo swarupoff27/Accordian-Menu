@@ -4,22 +4,22 @@
     box-sizing: border-box;
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     width: 500px;
-    height: 100vh;
-    margin: 50px;
-
 }
 
-.minus {
-    display: none;
+div label :nth-child(3){
+    display:none;
 }
 
-input,
-
-.section1:checked+label:nth-child(2) .plus1,
-.section2:checked+label:nth-child(5) .plus2,
-.section3:checked+label:nth-child(8) .plus3 {
+input{
     display: none;
 }
 
@@ -35,47 +35,39 @@ label {
     height: 40px;
     padding: 0 20px;
     transition: background-color 0.4s ease 0s;
-    position: relative;
-    z-index: 1;
 }
 
-.sections:hover {
+label:hover {
     background-color: #ccc;
     cursor: pointer;
 }
 
-.info1,
-.info2,
-.info3 {
+p{
+    padding:20px;
+}
+
+.container div{
     line-height: 20px;
-    padding: 0 20px;
-    opacity: 0;
-    height: 0;
-    transition: height, padding 0.2s ease 0s;
-   
-
+    height: 40px;
+    overflow:hidden;
+    transition: all 0.3s ease 0s;
 }
 
-.section1:checked~.info1,
-.section2:checked~.info2,
-.section3:checked~.info3 {
-    opacity: 1;
-    height: auto;
-    padding: 20px;
+input:checked + div{
+    height: 160px;
 }
 
-.section1:checked+label:nth-child(2) .minus1,
-.section2:checked+label:nth-child(5) .minus2,
-.section3:checked+label:nth-child(8) .minus3 {
-    display: block;
-}
-
-.section1:checked~.label1,
-.section2:checked~.label2,
-.section3:checked~.label3 {
+input:checked + div label{
     background-color: #ccc;
 }
 
+input:checked + div label :nth-child(2){
+    display:none;
+}
+
+input:checked + div label :nth-child(3){
+    display:block;
+}
 
 
 
