@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 100vh;
+    margin: 50px;
+
+}
+
+.minus {
+    display: none;
+}
+
+input,
+
+.section1:checked+label:nth-child(2) .plus1,
+.section2:checked+label:nth-child(5) .plus2,
+.section3:checked+label:nth-child(8) .plus3 {
+    display: none;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eeeeee;
+    width: 500px;
+    height: 40px;
+    padding: 0 20px;
+    transition: background-color 0.4s ease 0s;
+    position: relative;
+    z-index: 1;
+}
+
+.sections:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.info1,
+.info2,
+.info3 {
+    line-height: 20px;
+    padding: 0 20px;
+    opacity: 0;
+    height: 0;
+    transition: height, padding 0.2s ease 0s;
+   
+
+}
+
+.section1:checked~.info1,
+.section2:checked~.info2,
+.section3:checked~.info3 {
+    opacity: 1;
+    height: auto;
+    padding: 20px;
+}
+
+.section1:checked+label:nth-child(2) .minus1,
+.section2:checked+label:nth-child(5) .minus2,
+.section3:checked+label:nth-child(8) .minus3 {
+    display: block;
+}
+
+.section1:checked~.label1,
+.section2:checked~.label2,
+.section3:checked~.label3 {
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .parent {
+    width:1000px;
+    background-color: #eeeeee;
+      display:flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    height: 60px;
+      overflow:hidden;
+}
+
+.parent:hover {
+    background-color: #ccc;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+      overflow:none;
+}
+
+.parent p,
+.info {
+    padding: 20px;
+}
+
+.info {
+    width:1000px;
+    line-height: 25px;
+    background-color: white;
+    border: 1px solid;
+    display: none;
+}
+
+.section1:hover+.info,
+.section2:hover+.info,
+.section3:hover+.info {
+    display: block;
+    transition: all 0.4s ease 0s;
+
+} */
